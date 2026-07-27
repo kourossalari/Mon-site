@@ -194,3 +194,71 @@ a {
     background-position: 200% center;
   }
 }
+
+/* ---------- PROJETS ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.project-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(21, 19, 31, 0.06);
+  display: block;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px -25px rgba(21, 19, 31, 0.25);
+}
+.project-thumb {
+  height: 220px;
+  background: linear-gradient(135deg, var(--violet-soft), #d9cfff);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet-1);
+  font-weight: 600;
+  font-size: 14px;
+}
+.project-body {
+  padding: 24px;
+}
+.project-tag {
+  color: var(--violet-1);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.project-body h3 {
+  font-size: 19px;
+  margin: 8px 0 8px;
+}
+.project-body p {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+.tech-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tech-pill {
+  font-size: 12px;
+  background: var(--violet-soft);
+  color: var(--violet-1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
