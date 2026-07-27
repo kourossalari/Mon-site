@@ -3,7 +3,7 @@
 import Link from "next/link";
 import useScrollReveal from "../hooks/useScrollReveal";
 import Particles from "../components/Particles";
-import projects from "../data/Project";
+import projects from "../data/project";
 import skills from "../data/skills";
 
 export default function Home() {
@@ -14,9 +14,6 @@ export default function Home() {
       <section className="hero">
         <Particles />
         <div className="hero-content">
-          <div className="badge">
-            <span className="dot"></span> Disponible pour de nouveaux projets
-          </div>
           <h1>
             <span className="line"><span>Développeur front-end</span></span>
             <span className="line"><span>Créatif &amp; passionné</span></span>

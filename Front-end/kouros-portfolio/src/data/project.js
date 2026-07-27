@@ -22,8 +22,11 @@ const projects = [
     description:
       "Application bancaire front-end consommant une API documentée (Swagger), avec authentification JWT et gestion d'état Redux.",
     tech: ["React", "Redux Toolkit", "JWT"],
-    image: "/assets/projects/argentbank-home.png",
+    image: "/argentbank-home.png",
     alt: "Page d'accueil du site ArgentBank, avec image de pousse de plante et présentation des avantages du compte épargne",
+    links: {
+      github: "https://github.com/kourossalari/Projet-10",
+    },
   },
   {
     slug: "724-events",
@@ -32,8 +35,11 @@ const projects = [
     description:
       "Reprise et optimisation du site d'une agence événementielle — correction de bugs et tests unitaires.",
     tech: ["React", "Jest"],
-    image: "/assets/projects/724events-home.png",
+    image: "/724events-home.png",
     alt: "Page d'accueil du site 724 Events, avec photo d'une conférence du World Economic Forum",
+    links: {
+      github: "https://github.com/kourossalari/Projet-9",
+    },
   },
   {
     slug: "nina-carducci",
@@ -42,8 +48,11 @@ const projects = [
     description:
       "Site vitrine responsive pour une photographe, intégré à partir de maquettes desktop et mobile.",
     tech: ["HTML5", "CSS3"],
-    image: "/assets/projects/nina-carducci-home.png",
+    image: "/nina-carducci-home.png",
     alt: "Page d'accueil du portfolio de la photographe Nina Carducci, avec photo de foule en concert",
+    links: {
+      github: "https://github.com/kourossalari/Projet-8",
+    },
   },
   {
     slug: "kasa",
@@ -52,8 +61,11 @@ const projects = [
     description:
       "Application de location façon Airbnb — navigation entre logements, composants réutilisables et routing dynamique.",
     tech: ["React", "Vite"],
-    image: "/assets/projects/kasa-home.png",
+    image: "/kasa-home.png",
     alt: "Page d'accueil de l'application Kasa, avec bannière et grille de logements à louer",
+    links: {
+      github: "https://github.com/kourossalari/Projet7",
+    },
   },
   {
     slug: "sophie-bluel",
@@ -62,8 +74,11 @@ const projects = [
     description:
       "Portfolio d'architecte d'intérieur avec galerie filtrable, mode édition et back-office connecté à une API.",
     tech: ["JavaScript", "API"],
-    image: "/assets/projects/sophie-bluel-home.png",
+    image: "/sophie-bluel-home.png",
     alt: "Page d'accueil du portfolio de Sophie Bluel, architecte d'intérieur, avec son portrait",
+    links: {
+      github: "https://github.com/kourossalari/Projet6",
+    },
   },
 ];
 
