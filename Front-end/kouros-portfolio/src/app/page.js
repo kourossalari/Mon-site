@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import useScrollReveal from "@/hooks/useScrollReveal";
 
 export default function Home() {
   return (
