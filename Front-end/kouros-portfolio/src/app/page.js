@@ -27,8 +27,8 @@ export default function Home() {
             ressemble.
           </p>
           <div className="cta-row">
-            <button className="btn btn-primary">Visitez mon github</button>
-            <button className="btn btn-ghost">Telecharger mon CV</button>
+            <Link href="https://github.com/kourossalari?tab=repositories" className="btn btn-primary">Visitez mon github</Link>
+            <a href="/CV.pdf" download className="btn btn-ghost">Telecharger mon CV</a>
           </div>
         </div>
       </section>
@@ -94,40 +94,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" id="about">
-  <span className="eyebrow reveal-up">Mon profil</span>
+      <section className="block" id="parcours">
+        <span className="eyebrow reveal-up">Mon profil</span>
 
-  <h2 className="reveal-up">
-    Connaitre mon <em>parcours</em>
-  </h2>
+        <h2 className="reveal-up">
+          Connaitre mon <em>parcours</em>
+        </h2>
 
-  <div className="bodyParcours">
+        <div className="bodyParcours">
+          <div className="textAbout">
+            <p>
+              Développeur front-end passionné, je conçois des interfaces modernes, performantes et
+              centrées utilisateur. J’aime transformer des idées en expériences digitales concrètes.
+            </p>
 
-    <div className="textAbout">
-      <p>
-        Développeur front-end passionné, je conçois des interfaces modernes,
-        performantes et centrées utilisateur. J’aime transformer des idées
-        en expériences digitales concrètes.
-      </p>
+            <p>
+              Curieux et rigoureux, je me forme en continu pour maîtriser les technologies modernes
+              comme React et Next.js.
+            </p>
 
-      <p>
-        Curieux et rigoureux, je me forme en continu pour maîtriser les
-        technologies modernes comme React et Next.js.
-      </p>
+            <a href="/parcours" className="btn btn-primary">
+              Voir mon parcours
+            </a>
+          </div>
 
-      <a href="/parcours" className="btn btn-primary">
-        Voir mon parcours
-      </a>
-    </div>
-
-    <img 
-      className="imgKouros"
-      src="/photoKouros.jpg"
-      alt="Photo représentant Kouros SALARI"
-    />
-
-  </div>
-</section>
+          <img
+            className="imgKouros"
+            src="/photoKouros.jpg"
+            alt="Photo représentant Kouros SALARI"
+          />
+        </div>
+      </section>
     </div>
   );
 }

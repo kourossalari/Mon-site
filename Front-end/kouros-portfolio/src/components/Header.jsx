@@ -11,6 +11,7 @@ export default function Header() {
         <Link href="/">Accueil</Link>
         <Link href="/#projets">Projets</Link>
         <Link href="/#competences">Compétences</Link>
+        <Link href="/#parcours">Parcours</Link>
       </nav>
       <Link href="/contact">
         <MagneticButton className="btn btn-primary">Me contacter</MagneticButton>

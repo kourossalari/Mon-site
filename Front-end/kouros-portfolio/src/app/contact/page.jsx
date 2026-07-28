@@ -4,10 +4,10 @@ import { useState } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" })
-  const [errors, setErrors] = useState({})
-  const [status, setStatus] = useState(null)
-  const containerRef = useScrollReveal()
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState(null);
+  const containerRef = useScrollReveal();
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -15,31 +15,31 @@ export default function ContactPage() {
   }
 
   function validate() {
-    const newErrors = {}
-    if (!form.name.trim()) newErrors.name = "Le nom est requis."
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = "Le nom est requis.";
     if (!form.email.trim()) {
-      newErrors.email = "L'email est requis."
+      newErrors.email = "L'email est requis.";
     } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
-      newErrors.email = "Format d'email invalide."
+      newErrors.email = "Format d'email invalide.";
     }
-    if (!form.message.trim()) newErrors.message = "Le message est requis."
-    return newErrors
+    if (!form.message.trim()) newErrors.message = "Le message est requis.";
+    return newErrors;
   }
 
   async function handleSubmit(e) {
-    e.preventDefault()
-    const newErrors = validate()
-    setErrors(newErrors)
-    if (Object.keys(newErrors).length > 0) return
+    e.preventDefault();
+    const newErrors = validate();
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
 
-    setStatus("sending")
+    setStatus("sending");
     try {
       // À adapter : appel vers ton backend ou service d'envoi d'email (ex: Resend, Formspree)
-      await new Promise((resolve) => setTimeout(resolve, 900))
+      await new Promise((resolve) => setTimeout(resolve, 900));
       setStatus("success");
-      setForm({ name: "", email: "", message: "" })
+      setForm({ name: "", email: "", message: "" });
     } catch {
-      setStatus("error")
+      setStatus("error");
     }
   }
 
