@@ -471,13 +471,44 @@ footer {
   .contact-form{ padding:24px; }
 }
 
-.imgKouros {
-  width: 200px;
-  border-radius: 25px;
-}
+/* ---------- ABOUT ---------- */
 
 .bodyParcours {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  gap: 60px;
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1; 
+}
+
+.textAbout p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.imgKouros {
+  width: 270px; 
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .bodyParcours {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imgKouros {
+    width: 220px;
+  }
 }

@@ -94,21 +94,40 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" id="parcour">
-        <span className="eyebrow reveal-up">Mon profil</span>
-        <h2 className="reveal-up">
-          Connaitre mon <em>parcours</em>
-        </h2>
-        <div className="bodyParcours">
-        <img 
-        className="imgKouros"
-        src="/photoKouros.jpg"
-        alt="Photo representant Kouros SALARI"
-        />
-        </div>
-      </section>
+      <section className="block" id="about">
+  <span className="eyebrow reveal-up">Mon profil</span>
 
-      <footer>© 2026 Kouros Salari — Développeur Front-End</footer>
+  <h2 className="reveal-up">
+    Connaitre mon <em>parcours</em>
+  </h2>
+
+  <div className="bodyParcours">
+
+    <div className="textAbout">
+      <p>
+        Développeur front-end passionné, je conçois des interfaces modernes,
+        performantes et centrées utilisateur. J’aime transformer des idées
+        en expériences digitales concrètes.
+      </p>
+
+      <p>
+        Curieux et rigoureux, je me forme en continu pour maîtriser les
+        technologies modernes comme React et Next.js.
+      </p>
+
+      <a href="/parcours" className="btn btn-primary">
+        Voir mon parcours
+      </a>
+    </div>
+
+    <img 
+      className="imgKouros"
+      src="/photoKouros.jpg"
+      alt="Photo représentant Kouros SALARI"
+    />
+
+  </div>
+</section>
     </div>
   );
 }
