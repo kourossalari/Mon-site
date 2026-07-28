@@ -1,8 +1,13 @@
+import Timeline from "@/components/Timeline";
 
 export default function Parcours () {
     return(
-        <div>
-            
-        </div>
+        <section >
+
+            <h1>Mon Parcours</h1>
+
+            <Timeline />
+
+        </section>
     )
 }
