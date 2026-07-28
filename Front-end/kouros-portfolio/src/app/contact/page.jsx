@@ -34,13 +34,24 @@ export default function ContactPage() {
 
     setStatus("sending");
     try {
-      // À adapter : appel vers ton backend ou service d'envoi d'email (ex: Resend, Formspree)
-      await new Promise((resolve) => setTimeout(resolve, 900));
-      setStatus("success");
-      setForm({ name: "", email: "", message: "" });
-    } catch {
-      setStatus("error");
-    }
+  const response = await fetch("http://localhost:3001/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  });
+
+  if (!response.ok) {
+    throw new Error("Erreur lors de l'envoi");
+  }
+
+  setStatus("success");
+  setForm({ name: "", email: "", message: "" });
+
+} catch {
+  setStatus("error");
+}
   }
 
   return (

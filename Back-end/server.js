@@ -1,25 +1,20 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import contactRouter from "./routes/contact.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-
-app.post("/api/contact", (req, res) => {
-    const { name, email, message } = req.body;
-
-    console.log(name);
-    console.log(email);
-    console.log(message);
-
-    res.status(200).json({
-        message: "Message reçu"
-    });
+app.get("/", (req, res) => {
+  res.json({
+    message: "Backend fonctionne"
+  });
 });
 
+app.use("/api/contact", contactRouter);
 
-app.listen(3000, () => {
-    console.log("Serveur lancé sur le port 3000");
+app.listen(3001, () => {
+  console.log("Serveur lancé sur le port 3001");
 });
