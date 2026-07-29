@@ -12,9 +12,11 @@ app.use(cors({
     "https://mon-site-17aw.vercel.app",
     "http://localhost:3000"
   ],
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "OPTIONS"],
   credentials: true,
 }));
+
+app.options("*", cors());
 
 app.use(express.json());
 
