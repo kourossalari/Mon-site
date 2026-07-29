@@ -17,6 +17,8 @@ app.use(express.json());
 
 app.use("/api/contact", contactRouter);
 
-app.listen(3001, () => {
-  console.log("Serveur lancé sur le port 3001");
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`Serveur lancé sur le port ${PORT}`);
 });
