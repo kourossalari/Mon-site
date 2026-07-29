@@ -16,13 +16,12 @@ app.use(cors({
   credentials: true,
 }));
 
-
 app.use(express.json());
 
 app.use("/api/contact", contactRouter);
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Serveur lancé sur le port ${PORT}`);
 });
