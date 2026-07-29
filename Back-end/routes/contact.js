@@ -3,7 +3,7 @@ import transporter from "../config/mailer.js";
 
 const router = express.Router();
 
-router.post("/", async (req, res) => {
+router.post("/api/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
