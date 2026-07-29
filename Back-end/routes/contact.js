@@ -27,12 +27,12 @@ ${message}
     });
 
   } catch (error) {
-    console.error("Erreur Nodemailer :", error);
+  console.error("Erreur Nodemailer COMPLETE :", error);
 
-    res.status(500).json({
-      message: "Erreur lors de l'envoi",
-    });
-  }
+  res.status(500).json({
+    message: error.message,
+  });
+}
 });
 
 export default router;
