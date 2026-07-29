@@ -20,6 +20,10 @@ app.use(express.json());
 
 app.use("/api/contact", contactRouter);
 
+app.get("/", (req, res) => {
+  res.send("Backend OK 🚀");
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, "0.0.0.0", () => {

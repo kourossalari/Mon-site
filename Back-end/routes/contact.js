@@ -7,11 +7,6 @@ router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    console.log("Nom :", name);
-    console.log("Email :", email);
-    console.log("Message :", message);
-    console.log("Tentative d'envoi du mail...");
-
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_RECEIVER,
@@ -26,8 +21,6 @@ ${message}
     };
 
     await transporter.sendMail(mailOptions);
-
-    console.log("Email envoyé avec succès !");
 
     res.status(200).json({
       message: "Message envoyé avec succès",
