@@ -7,8 +7,13 @@ dotenv.config();
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log("ORIGIN RECUE :", req.headers.origin);
+  next();
+});
+
 const allowedOrigins = [
-  "https://mon-site-17aw-e711kzulk-kourossalaris-projects.vercel.app/",
+  "https://mon-site-17aw-e711kzulk-kourossalaris-projects.vercel.app",
   "http://localhost:3000"
 ];
 
