@@ -25,7 +25,7 @@ export default function Parcours() {
 
       <section className="body today">
   <div className="todayContainer">
-    <h2>Aujourd’hui</h2>
+    <h2>Aujourd’<em>hui</em></h2>
 
     <p>
       Je me spécialise en développement Front-End avec React et Next.js.
@@ -42,7 +42,8 @@ export default function Parcours() {
   </div>
 </section>
 
-<section className="block contact">
+<section className="body blocContact">
+  <div className="contact">
     <h2>Envie de travailler <em>ensemble</em> ?</h2>
     <p className="contactIntro">
     Je suis disponible pour discuter de vos projets ou opportunités.
@@ -61,7 +62,7 @@ export default function Parcours() {
         </MagneticButton>
         </Link>
         </div>
-
+</div>
 </section>
     </div>
   );
