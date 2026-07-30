@@ -7,33 +7,35 @@ dotenv.config();
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log("ORIGIN RECUE :", req.headers.origin);
-  next();
-});
-
 const allowedOrigins = [
-  "https://mon-site-17aw-e711kzulk-kourossalaris-projects.vercel.app",
   "http://localhost:3000"
 ];
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
+app.use(cors({
+  origin: (origin, callback) => {
+    console.log("ORIGIN RECUE :", origin);
 
-  if (allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", origin);
-  }
+    // Autorise les requêtes sans origine (Postman, tests backend...)
+    if (!origin) {
+      return callback(null, true);
+    }
 
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  res.header("Access-Control-Allow-Credentials", "true");
+    // Autorise toutes les URLs Vercel du projet
+    if (origin.endsWith(".vercel.app")) {
+      return callback(null, true);
+    }
 
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
-  }
+    // Autorise localhost en développement
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
 
-  next();
-});
+    return callback(new Error("Origine non autorisée par CORS"));
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true
+}));
 
 app.use(express.json());
 
