@@ -98,6 +98,11 @@ nav a:hover {
 nav a:hover::after {
   width: 100%;
 }
+@media (max-width: 780px) {
+  .linkMedia {
+    display: none;
+  }
+}
 
 /* ---------- BUTTONS ---------- */
 .btn {
