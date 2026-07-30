@@ -1,5 +1,5 @@
 import express from "express";
-import transporter from "../config/mailer.js";
+import { sendEmail } from "../config/mailer.js";
 
 const router = express.Router();
 
@@ -7,32 +7,25 @@ router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_RECEIVER,
-      subject: `Nouveau message de ${name}`,
-      text: `
-Nom : ${name}
-Email : ${email}
+    const success = await sendEmail(name, email, message);
 
-Message :
-${message}
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    res.status(200).json({
-      message: "Message envoyé avec succès",
-    });
+    if (success) {
+      res.status(200).json({
+        message: "Message envoyé avec succès",
+      });
+    } else {
+      res.status(500).json({
+        message: "Erreur lors de l'envoi",
+      });
+    }
 
   } catch (error) {
-  console.error("Erreur Nodemailer COMPLETE :", error);
+    console.error("Erreur RESEND :", error);
 
-  res.status(500).json({
-    message: error.message,
-  });
-}
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 });
 
 export default router;
