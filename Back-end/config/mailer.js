@@ -9,5 +9,12 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
+transporter.verify((error, success) => {
+  if (error) {
+    console.log("Erreur SMTP :", error);
+  } else {
+    console.log("SMTP connecté !");
+  }
+});
 
 export default transporter;
