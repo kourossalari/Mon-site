@@ -1,20 +1,26 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true, // SSL
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
-transporter.verify((error, success) => {
-  if (error) {
-    console.log("Erreur SMTP :", error);
-  } else {
-    console.log("SMTP connecté !");
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export const sendEmail = async (name, email, message) => {
+  try {
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: process.env.EMAIL_RECEIVER,
+      subject: "Nouveau message de contact",
+      html: `
+        <h2>Nouveau message</h2>
+        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
+    });
+
+    console.log("EMAIL SENT:", response);
+
+    return true;
+  } catch (error) {
+    console.log("RESEND ERROR:", error);
+    return false;
   }
-});
-
-export default transporter;
+};
