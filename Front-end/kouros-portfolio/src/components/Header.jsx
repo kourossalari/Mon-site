@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <div className="logo">
-        KS <span>Kouros Salari — Développeur Front-End</span>
+        KS <span className="linkMedia">Kouros Salari — Développeur Front-End</span>
       </div>
       <nav>
   <Link href="/">Accueil</Link>
