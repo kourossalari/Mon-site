@@ -6,7 +6,7 @@ const parcours = [
   {
     date: "2022",
     title: "Bac professionnel électricité",
-    text: "Obtention de mon diplôme dans le domaine de l'électricité. Cette formation m'a permis de développer ma rigueur, mon autonomie et ma capacité à résoudre des problèmes techniques sur le terrain.",
+    text: "Fin de mon cursus dans le domaine de l'électricité. Cette formation m'a permis de développer ma rigueur, mon autonomie et ma capacité à résoudre des problèmes techniques sur le terrain.",
   },
   {
     date: "Avril 2025",
