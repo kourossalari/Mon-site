@@ -96,7 +96,7 @@ const projects = [
     context:
       "Dans le cadre de ce projet, j'ai repris un site existant pour une agence événementielle afin d'en améliorer la qualité globale. Le travail a consisté à identifier et corriger des bugs, optimiser les performances et mettre en place des tests unitaires pour fiabiliser l'application.",
     tech: ["React", "Jest", "Chrome DevTools"],
-    image: "/724events-home.png",
+    image: "/724events-home.webp",
     alt: "Page d'accueil du site 724 Events, avec photo d'une conférence du World Economic Forum",
 
     objectifs: [
@@ -139,7 +139,7 @@ const projects = [
     context:
       "Dans ce projet, j'ai réalisé l'intégration complète d'un site vitrine pour une photographe professionnelle à partir de maquettes fournies (desktop et mobile). L'objectif était de produire un site fidèle au design, responsive et optimisé pour une navigation fluide sur tous les supports.",
     tech: ["HTML5", "CSS3", "WAVE", "Lighthouse"],
-    image: "/nina-carducci-home.png",
+    image: "/nina-carducci-home.webp",
     alt: "Page d'accueil du portfolio de la photographe Nina Carducci, avec photo de foule en concert",
 
     objectifs: [
@@ -183,7 +183,7 @@ const projects = [
     context:
       "Dans ce projet, j'ai développé une application de location de logements inspirée d'Airbnb en utilisant React. L'objectif était de créer une interface dynamique avec un routing complet, des composants réutilisables et une expérience utilisateur fluide.",
     tech: ["React", "React Router", "Vite"],
-    image: "/kasa-home.png",
+    image: "/kasa-home.webp",
     alt: "Page d'accueil de l'application Kasa, avec bannière et grille de logements à louer",
 
     objectifs: [
