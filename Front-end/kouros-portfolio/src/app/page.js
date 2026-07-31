@@ -127,7 +127,7 @@ export default function Home() {
 
           <img
             className="imgKouros"
-            src="/photoKouros.jpg"
+            src="/photoKouros.webp"
             alt="Photo représentant Kouros SALARI"
           />
         </div>

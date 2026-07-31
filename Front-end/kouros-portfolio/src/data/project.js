@@ -6,7 +6,7 @@ const projects = [
     context:
       "Cahier des charges complet pour une plateforme permettant aux restaurateurs de créer et diffuser leurs menus (PDF, Instagram, Deliveroo) sans compétence technique — méthodologie Agile, spécifications techniques et choix d'architecture.",
     tech: ["React", "Node.js", "MongoDB", "API REST", "Figma", "Notion"],
-    image: "/MaquetteFigma.png",
+    image: "/MaquetteFigma.webp",
     alt: "Maquette de l'interface MenuMaker",
 
     objectifs: [
@@ -53,7 +53,7 @@ const projects = [
     context:
       "Dans le cadre de ma formation en développement web, j'ai travaillé sur la mise en place d'une application bancaire front-end. Le projet reposait sur l'intégration d'une API existante documentée via Swagger, avec une attention particulière portée à l'authentification et à la gestion des données utilisateur.",
     tech: ["React", "Redux Toolkit", "API REST", "JWT"],
-    image: "/argentbank-home.png",
+    image: "/argentbank-home.webp",
     alt: "Page d'accueil du site ArgentBank, avec image de pousse de plante et présentation des avantages du compte épargne",
 
     objectifs: [
@@ -228,7 +228,7 @@ const projects = [
     context:
       "Dans ce projet, j'ai développé un portfolio dynamique pour une architecte d'intérieur avec une interface publique et un mode administrateur. L'application repose sur une API permettant de gérer les contenus (travaux, catégories) avec un système d'authentification et d'édition en temps réel.",
     tech: ["JavaScript", "API REST"],
-    image: "/sophie-bluel-home.png",
+    image: "/sophie-bluel-home.webp",
     alt: "Page d'accueil du portfolio de Sophie Bluel, architecte d'intérieur, avec son portrait",
 
     objectifs: [
