@@ -568,7 +568,7 @@ footer {
   background: white;
   padding: 50px;
   border-radius: 25px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
@@ -590,7 +590,6 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
 }
-
 
 /* évite que la marge du dernier item ajoute de l'espace en plus */
 .timelineItem:last-child {
@@ -637,7 +636,7 @@ footer {
   background: white;
   padding: 50px;
   border-radius: 25px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 

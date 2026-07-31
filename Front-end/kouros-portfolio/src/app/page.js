@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-content">
           <h1>
             <span className="line">
-              <span>Développeur front-end</span>
+              <span>Kouros Développeur</span>
             </span>
             <span className="line">
               <span>Créatif &amp; passionné</span>
@@ -27,8 +27,15 @@ export default function Home() {
             ressemble.
           </p>
           <div className="cta-row">
-            <Link href="https://github.com/kourossalari?tab=repositories" className="btn btn-primary">Visitez mon github</Link>
-            <a href="/CV.pdf" download className="btn btn-ghost">Telecharger mon CV</a>
+            <Link
+              href="https://github.com/kourossalari?tab=repositories"
+              className="btn btn-primary"
+            >
+              Visitez mon github
+            </Link>
+            <a href="/CV.pdf" download className="btn btn-ghost">
+              Telecharger mon CV
+            </a>
           </div>
         </div>
       </section>

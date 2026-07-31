@@ -27,35 +27,33 @@ export default function ContactPage() {
   }
 
   async function handleSubmit(e) {
-  e.preventDefault();
-  const newErrors = validate();
-  setErrors(newErrors);
-  if (Object.keys(newErrors).length > 0) return;
+    e.preventDefault();
+    const newErrors = validate();
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
 
-  setStatus("sending");
+    setStatus("sending");
 
-  try {
-    const response = await fetch("https://backend-kouros-salari.onrender.com/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
+    try {
+      const response = await fetch("https://backend-kouros-salari.onrender.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    if (!response.ok) {
-      throw new Error("Erreur lors de l'envoi");
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
+
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Erreur:", error);
+      setStatus("error");
     }
-
-    setStatus("success");
-    setForm({ name: "", email: "", message: "" });
-
-  } catch (error) {
-    console.error("Erreur:", error);
-    setStatus("error");
   }
-}
-
 
   return (
     <section ref={containerRef} className="block contact-page">
