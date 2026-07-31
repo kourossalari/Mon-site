@@ -1,5 +1,3 @@
-"use client"
-
 import { notFound } from "next/navigation";
 import projects from "../../../data/project";
 
@@ -14,9 +12,11 @@ export default async function ProjectPage({ params }) {
 
   return (
     <section className="block">
+      <div className="headerProject">
       <span className="project-tag">{project.tag}</span>
       <h1>{project.title}</h1>
       <p>{project.context}</p>
+      </div>
       {project.image && (
         <img
           src={project.image}
@@ -24,6 +24,8 @@ export default async function ProjectPage({ params }) {
           style={{ width: "100%", borderRadius: "16px", margin: "24px 0" }}
         />
       )}
+
+      <div className="projectLink">
       <div className="tech-row">
         {project.tech.map((t) => (
           <span className="tech-pill" key={t}>
@@ -31,29 +33,9 @@ export default async function ProjectPage({ params }) {
           </span>
         ))}
       </div>
-        <div className="textProjets">
-      <div className="objectifs">
-         <h3>{project.objectif}</h3>
-        {project.objectifs.map((t) =>(
-          <span className="objectif-pill" key={t}>
-            {t}
-          </span>
-        ))}
-      </div>
-
-      <div className="résultats">
-        <h3>{project.resultat}</h3>
-        {project.resultats.map((t) =>(
-          <span className="résultat-pill" key={t}>
-            {t}
-          </span>
-        ))}
-      </div>
-
-      </div>
 
       {project.links && (
-        <div className="cta-row" style={{ justifyContent: "flex-start", marginTop: "32px" }}>
+        <div>
           {project.links.github && (
             <a
               href={project.links.github}
@@ -86,6 +68,52 @@ export default async function ProjectPage({ params }) {
           )}
         </div>
       )}
+
+      </div>
+
+      <div className="textProjets">
+        {project.objectifs && (
+  <div className="cardTextProject">
+    <h3>Les objectifs réaliser lors de ce projet ont été :</h3>
+    <ul>
+      {project.objectifs.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+      {project.resultats && (
+  <div className="cardTextProject">
+    <h3>Le résultat obtenu à la réalisation de mon projet a été :</h3>
+    <ul>
+      {project.resultats.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+
+        {project.competences && (
+  <div className="cardTextProject">
+    <h3>Les compétences acquises lors de ce projet ont été :</h3>
+    <ul>
+      {project.competences.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+      {project.perspectives && (
+  <div className="cardTextProject">
+    <h3>Les perspectives d'évolution futur du projet :</h3>
+    <ul>
+      {project.perspectives.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+</div>
     </section>
   );
 }

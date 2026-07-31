@@ -233,7 +233,6 @@ nav a:hover::after {
   animation-delay: 0.55s;
 }
 .hero .cta-row {
-  margin-top: 38px;
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -305,12 +304,46 @@ em {
 }
 
 /* ---------- PROJETS ---------- */
+.headerProject {
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.projectLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   max-width: 1100px;
   margin: 0 auto;
+}
+.cardTextProject {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s;
+}
+.cardTextProject:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px -25px rgba(21, 19, 31, 0.25);
 }
 .project-card {
   border-radius: var(--radius);
@@ -347,6 +380,7 @@ em {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  justify-content: center;
 }
 .project-body h3 {
   font-size: 19px;
@@ -365,41 +399,17 @@ em {
 }
 .tech-pill {
   font-size: 12px;
-  background: var(--violet-soft);
-  color: var(--violet-1);
+  background: var(--violet-1);
+  color: white;
   padding: 5px 12px;
   border-radius: 20px;
   font-weight: 600;
 }
-
-.objectifs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 25px;
-  background: white;
-  color: black;
-  box-shadow: 0 20px 50px #00000014;
-}
-
-.résultats {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 25px;
-  background: white;
-  color: black;
-  box-shadow: 0 20px 50px #00000014;
-}
-
 .textProjets {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 /* ---------- SKILLS ---------- */
