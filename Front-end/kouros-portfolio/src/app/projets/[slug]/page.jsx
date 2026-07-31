@@ -14,7 +14,7 @@ export default async function ProjectPage({ params }) {
     <section className="block">
       <span className="project-tag">{project.tag}</span>
       <h1>{project.title}</h1>
-      <p>{project.description}</p>
+      <p>{project.context}</p>
       {project.image && (
         <img
           src={project.image}
@@ -28,6 +28,26 @@ export default async function ProjectPage({ params }) {
             {t}
           </span>
         ))}
+      </div>
+        <div className="textProjets">
+      <div className="objectifs">
+         <h3>{project.objectif}</h3>
+        {project.objectifs.map((t) =>(
+          <span className="objectif-pill" key={t}>
+            {t}
+          </span>
+        ))}
+      </div>
+
+      <div className="résultats">
+        <h3>{project.resultat}</h3>
+        {project.resultats.map((t) =>(
+          <span className="résultat-pill" key={t}>
+            {t}
+          </span>
+        ))}
+      </div>
+
       </div>
 
       {project.links && (

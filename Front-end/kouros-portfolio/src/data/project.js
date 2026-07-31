@@ -25,33 +25,37 @@ const projects = [
   image: "/argentbank-home.png",
   alt: "Page d'accueil du site ArgentBank, avec image de pousse de plante et présentation des avantages du compte épargne",
 
+  objectif: "Les objectifs réaliser lors de ce projet ont été :",
+
   objectifs: [
-    "Implémenter une authentification sécurisée via JWT",
-    "Consommer une API REST pour récupérer et modifier les données utilisateur",
-    "Mettre en place une gestion d’état globale avec Redux",
-    "Structurer une application React maintenable et scalable"
+    "-Implémenter une authentification sécurisée via JWT",
+    "-Consommer une API REST pour récupérer et modifier les données utilisateur",
+    "-Mettre en place une gestion d’état globale avec Redux",
+    "-Structurer une application React maintenable et scalable"
   ],
 
   competences: [
-    "Gestion de l’authentification avec JWT",
-    "Utilisation de Redux Toolkit pour le state management",
-    "Consommation d’API REST (GET / PUT)",
-    "Structuration d’une application React",
-    "Lecture et exploitation d’une documentation Swagger"
+    "-Gestion de l’authentification avec JWT",
+    "-Utilisation de Redux Toolkit pour le state management",
+    "-Consommation d’API REST (GET / PUT)",
+    "-Structuration d’une application React",
+    "-Lecture et exploitation d’une documentation Swagger"
   ],
 
+  resultat: "Le résultat obtenu à la réalisation de mon projet a été :",
+
   resultats: [
-    "Connexion utilisateur sécurisée",
-    "Récupération des informations utilisateur via API",
-    "Modification du nom d’utilisateur via une requête API",
-    "Simulation des modifications de transactions côté front (absence de routes API)"
+    "-Connexion utilisateur sécurisée",
+    "-Récupération des informations utilisateur via API",
+    "-Modification du nom d’utilisateur via une requête API",
+    "-Simulation des modifications de transactions côté front (absence de routes API)"
   ],
 
   perspectives: [
-    "Mettre en place les routes backend pour les transactions et les notes",
-    "Connecter le front à ces nouvelles routes API",
-    "Améliorer la gestion des erreurs et des états de chargement",
-    "Optimiser l’expérience utilisateur (feedback visuel, validations)"
+    "-Mettre en place les routes backend pour les transactions et les notes",
+    "-Connecter le front à ces nouvelles routes API",
+    "-Améliorer la gestion des erreurs et des états de chargement",
+    "-Optimiser l’expérience utilisateur (feedback visuel, validations)"
   ],
 
   links: {

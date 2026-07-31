@@ -372,6 +372,36 @@ em {
   font-weight: 600;
 }
 
+.objectifs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  box-shadow: 0 20px 50px #00000014;
+}
+
+.résultats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  box-shadow: 0 20px 50px #00000014;
+}
+
+.textProjets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
 /* ---------- SKILLS ---------- */
 .skills-wrap {
   max-width: 1000px;
