@@ -21,7 +21,7 @@ export default async function ProjectPage({ params }) {
         <img
           src={project.image}
           alt={project.alt}
-          style={{ width: "100%", borderRadius: "16px", margin: "24px 0" }}
+          style={{ width: "100%", borderRadius: "25px", margin: "24px 0" }}
         />
       )}
 

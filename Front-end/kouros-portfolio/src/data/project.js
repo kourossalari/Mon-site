@@ -6,7 +6,7 @@ const projects = [
     context:
       "Cahier des charges complet pour une plateforme permettant aux restaurateurs de créer et diffuser leurs menus (PDF, Instagram, Deliveroo) sans compétence technique — méthodologie Agile, spécifications techniques et choix d'architecture.",
     tech: ["React", "Node.js", "MongoDB", "API REST", "Figma", "Notion"],
-    image: null,
+    image: "/MaquetteFigma.png",
     alt: "Maquette de l'interface MenuMaker",
 
     objectifs: [
