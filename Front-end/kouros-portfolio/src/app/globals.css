@@ -446,6 +446,7 @@ em {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
 .skill-tag {
   font-size: 13px;
