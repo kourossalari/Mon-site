@@ -15,11 +15,15 @@ export default function Header() {
         </span>
 
         <span className="linkMedia">
+          <Link href="/#parcours">A propos</Link>
+        </span>
+
+        <span className="linkMedia">
           <Link href="/#competences">Compétences</Link>
         </span>
 
         <span className="linkMedia">
-          <Link href="/#parcours">Parcours</Link>
+          <Link href="/parcours">Parcours</Link>
         </span>
       </nav>
       <Link href="/contact">

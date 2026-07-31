@@ -120,9 +120,9 @@ export default function Home() {
               comme React et Next.js.
             </p>
 
-            <a href="/parcours" className="btn btn-primary">
+            <Link href="/parcours" className="btn btn-primary">
               Voir mon parcours
-            </a>
+            </Link>
           </div>
 
           <img
