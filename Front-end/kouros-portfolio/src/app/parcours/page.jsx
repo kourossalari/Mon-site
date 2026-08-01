@@ -2,8 +2,7 @@
 
 import Timeline from "@/components/Timeline";
 import useScrollReveal from "@/hooks/useScrollReveal";
-import MagneticButton from "@/components/MagneticButton";
-import Link from "next/link";
+import LinkMagneticButton from "@/components/LinkMagneticButton";
 
 export default function Parcours() {
   const containerRef = useScrollReveal();
@@ -12,9 +11,9 @@ export default function Parcours() {
     <div ref={containerRef}>
       <section className="block">
         <span className="eyebrow">Mon parcours</span>
-        <h2>
+        <h1>
           De l'électricité au <em>code</em>
-        </h2>
+        </h1>
         <p className="sub">
           Après plusieurs années dans l’électricité, j’ai choisi de me reconvertir dans le
           développement web. Aujourd’hui, je mets ma rigueur technique et mon sens du détail au
@@ -61,9 +60,7 @@ export default function Parcours() {
 
           <div className="contactTwo">
             <p>Vous pouvez également me contacter via le formulaire de</p>
-            <Link href="/contact">
-              <MagneticButton className="btn btn-primary">CONTACT</MagneticButton>
-            </Link>
+            <LinkMagneticButton />
           </div>
         </div>
       </section>

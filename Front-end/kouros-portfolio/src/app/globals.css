@@ -5,7 +5,9 @@
   --violet-1: #7c6ff0;
   --violet-2: #a78bfa;
   --violet-soft: #efe9ff;
-  --gray: #5c5a6b;
+  --violet-text: #4f46e5;
+  --violet-em : #821939;
+  --gray: #000000;
   --white: #ffffff;
   --radius: 16px;
 }
@@ -120,7 +122,7 @@ nav a:hover::after {
     box-shadow 0.35s;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--violet-1), var(--violet-2));
+  background: linear-gradient(135deg, var(--violet-text), #6f61ea);
   color: #fff;
   box-shadow: 0 8px 20px -6px rgba(124, 111, 240, 0.55);
 }
@@ -186,7 +188,7 @@ nav a:hover::after {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--violet-1), var(--violet-2));
+  background: linear-gradient(135deg, var(--violet-text), var(--violet-2));
   box-shadow: 0 0 0 4px var(--violet-soft);
 }
 
@@ -240,6 +242,7 @@ nav a:hover::after {
   transform: translateY(14px);
   animation: reveal 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   animation-delay: 0.72s;
+  margin-top: 30px;
 }
 
 @keyframes reveal {
@@ -261,7 +264,7 @@ section.block {
 .eyebrow {
   display: block;
   text-align: center;
-  color: var(--violet-1);
+  color: var(--violet-text);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -275,7 +278,7 @@ section.block {
 }
 .block h2 em {
   font-style: italic;
-  color: var(--violet-1);
+  color: var(--violet-em);
 }
 .block > p.sub {
   text-align: center;
@@ -288,7 +291,7 @@ section.block {
 
 em {
   font-style: italic;
-  color: var(--violet-1);
+  color: var(--violet-em);
 }
 
 .reveal-up {
@@ -367,7 +370,7 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet-1);
+  color: var(--violet-text);
   font-weight: 600;
   font-size: 14px;
 }
@@ -375,7 +378,7 @@ em {
   padding: 24px;
 }
 .project-tag {
-  color: var(--violet-1);
+  color: var(--violet-text);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -399,7 +402,7 @@ em {
 }
 .tech-pill {
   font-size: 12px;
-  background: var(--violet-1);
+  background: var(--violet-text);
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -435,7 +438,7 @@ em {
 }
 .skill-category h3 {
   font-size: 16px;
-  color: var(--violet-1);
+  color: var(--violet-text);
   margin-bottom: 14px;
   font-family: "Inter";
   font-weight: 700;
@@ -484,6 +487,11 @@ footer {
   max-width: 640px;
   margin: 0 auto;
   padding-top: 80px;
+}
+.block h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: clamp(28px, 3.6vw, 42px);
 }
 .contact-form {
   background: #fff;
@@ -803,12 +811,12 @@ footer {
 .timelineCard span {
   font-size: 12px;
   font-weight: 700;
-  color: var(--violet-1);
+  color: var(--violet-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.timelineCard h3 {
+.timelineCard h2 {
   margin: 12px 0 10px;
   font-size: 22px;
   font-family: "Playfair Display", serif;

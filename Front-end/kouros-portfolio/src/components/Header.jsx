@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MagneticButton from "./MagneticButton";
+import LinkMagneticButton from "./LinkMagneticButton";
 
 export default function Header() {
   return (
@@ -26,9 +27,7 @@ export default function Header() {
           <Link href="/parcours">Parcours</Link>
         </span>
       </nav>
-      <Link href="/contact">
-        <MagneticButton className="btn btn-primary">Me contacter</MagneticButton>
-      </Link>
+      <LinkMagneticButton>Me contacter</LinkMagneticButton>
     </header>
   );
 }

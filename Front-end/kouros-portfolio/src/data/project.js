@@ -54,7 +54,7 @@ const projects = [
       "Dans le cadre de ma formation en développement web, j'ai travaillé sur la mise en place d'une application bancaire front-end. Le projet reposait sur l'intégration d'une API existante documentée via Swagger, avec une attention particulière portée à l'authentification et à la gestion des données utilisateur.",
     tech: ["React", "Redux Toolkit", "API REST", "JWT"],
     image: "/argentbank-home.webp",
-    alt: "Page d'accueil du site ArgentBank, avec image de pousse de plante et présentation des avantages du compte épargne",
+    alt: "Page d'accueil du site ArgentBank, avec image de pousse de plante.",
 
     objectifs: [
       "Implémenter une authentification sécurisée via JWT",

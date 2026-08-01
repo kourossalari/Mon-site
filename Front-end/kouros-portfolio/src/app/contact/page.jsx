@@ -58,9 +58,9 @@ export default function ContactPage() {
   return (
     <section ref={containerRef} className="block contact-page">
       <span className="eyebrow reveal-up">Contact</span>
-      <h2 className="reveal-up">
+      <h1 className="reveal-up">
         Travaillons <em>ensemble</em>
-      </h2>
+      </h1>
       <p className="sub reveal-up">
         Une question, un projet, une opportunité ? Écrivez-moi, je réponds rapidement.
       </p>

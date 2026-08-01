@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }) {
       <div className="textProjets">
         {project.objectifs && (
   <div className="cardTextProject">
-    <h3>Les objectifs réaliser lors de ce projet ont été :</h3>
+    <h2>Les objectifs réaliser lors de ce projet ont été :</h2>
     <ul>
       {project.objectifs.map((item, index) => (
         <li key={index}>{item}</li>
@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }) {
 )}
       {project.resultats && (
   <div className="cardTextProject">
-    <h3>Le résultat obtenu à la réalisation de mon projet a été :</h3>
+    <h2>Le résultat obtenu à la réalisation de mon projet a été :</h2>
     <ul>
       {project.resultats.map((item, index) => (
         <li key={index}>{item}</li>
@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }) {
 
         {project.competences && (
   <div className="cardTextProject">
-    <h3>Les compétences acquises lors de ce projet ont été :</h3>
+    <h2>Les compétences acquises lors de ce projet ont été :</h2>
     <ul>
       {project.competences.map((item, index) => (
         <li key={index}>{item}</li>
@@ -105,7 +105,7 @@ export default async function ProjectPage({ params }) {
 )}
       {project.perspectives && (
   <div className="cardTextProject">
-    <h3>Les perspectives d'évolution futur du projet :</h3>
+    <h2>Les perspectives d'évolution futur du projet :</h2>
     <ul>
       {project.perspectives.map((item, index) => (
         <li key={index}>{item}</li>

@@ -61,7 +61,7 @@ function Timeline() {
           <div className="timelineCard">
             <span>{item.date}</span>
 
-            <h3>{item.title}</h3>
+            <h2>{item.title}</h2>
 
             <p>{item.text}</p>
           </div>
